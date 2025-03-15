@@ -37,8 +37,8 @@ const products = [
 
 export default function Products() {
   return (
-    <section className="py-24 bg-slate-50">
-      <div className="container">
+    <section className="py-24">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Our Solutions</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -56,21 +56,22 @@ export default function Products() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full">
-                <CardHeader>
+              <Card className="h-full flex flex-col">
+                <CardHeader className="flex-none">
                   <product.icon className="h-10 w-10 text-primary mb-4" />
                   <CardTitle>{product.name}</CardTitle>
                   <CardDescription>{product.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 mb-6">
+                <CardContent className="flex-1 flex flex-col">
+                  <ul className="space-y-2 mb-6 flex-1">
                     {product.features.map((feature) => (
-                      <li key={feature} className="text-sm text-muted-foreground">
-                        • {feature}
+                      <li key={feature} className="text-sm text-muted-foreground flex items-start">
+                        <span className="mr-2 mt-1.5 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link href={product.link}>
+                  <Link href={product.link} className="mt-auto">
                     <Button variant="outline" className="w-full">Learn More</Button>
                   </Link>
                 </CardContent>
