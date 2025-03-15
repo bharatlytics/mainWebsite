@@ -9,7 +9,7 @@ export default function Hero() {
       <NeuralBackground />
 
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
             className="text-center md:text-left space-y-8"
             initial={{ opacity: 0, y: 20 }}
@@ -55,27 +55,44 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
+            className="aspect-video rounded-lg overflow-hidden shadow-xl"
           >
-            {[
-              { value: "40%", label: "Average OEE Improvement" },
-              { value: "60%", label: "Reduced Downtime" },
-              { value: "25%", label: "Energy Cost Savings" },
-              { value: "99.9%", label: "Quality Rate Achievement" }
-            ].map((stat) => (
-              <div 
-                key={stat.label}
-                className="text-center p-8 rounded-lg bg-black/5 backdrop-blur hover:bg-black/10 transition-colors"
-              >
-                <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/7Mr0Pgv1uU0"
+              title="Factorylytics.ai Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
           </motion.div>
         </div>
+
+        <motion.div
+          className="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          {[
+            { value: "40%", label: "Average OEE Improvement" },
+            { value: "60%", label: "Reduced Downtime" },
+            { value: "25%", label: "Energy Cost Savings" },
+            { value: "99.9%", label: "Quality Rate Achievement" }
+          ].map((stat) => (
+            <div 
+              key={stat.label}
+              className="text-center p-8 rounded-lg bg-black/5 backdrop-blur hover:bg-black/10 transition-colors"
+            >
+              <div className="text-3xl font-bold text-primary mb-2">{stat.value}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/components/sections/ContactForm";
 import { MapPin, Phone, Mail } from "lucide-react";
+import AiAssistant from "@/components/ui/ai-assistant";
 
 export default function Contact() {
   return (
@@ -25,7 +26,11 @@ export default function Contact() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <div className="sticky top-24">
+              <div className="sticky top-24 space-y-8">
+                <div className="flex items-center justify-center mb-8">
+                  <AiAssistant />
+                </div>
+
                 <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
                 <p className="text-muted-foreground mb-8">
                   Whether you're interested in our products, partnership opportunities,

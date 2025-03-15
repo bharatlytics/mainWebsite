@@ -64,9 +64,9 @@ const products = [
 
 export default function Products() {
   return (
-    <main>
+    <main className="flex-1">
       <section className="py-24">
-        <div className="container">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export default function Products() {
                       </div>
                       <div className="relative aspect-video rounded-lg overflow-hidden">
                         <img
-                          src={index === 0 
+                          src={index === 0
                             ? "https://images.unsplash.com/photo-1632914146475-bfe6fa6b2a12"
                             : index === 1
                             ? "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
