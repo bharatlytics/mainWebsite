@@ -36,7 +36,7 @@ export default function Solutions() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.title}
@@ -46,7 +46,7 @@ export default function Solutions() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="h-full flex flex-col">
-                <CardContent className="pt-6 flex flex-col h-full">
+                <CardContent className="pt-6 flex flex-col h-full items-center text-center">
                   <solution.icon className="h-12 w-12 text-primary mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{solution.title}</h3>
                   <p className="text-sm text-muted-foreground flex-grow">{solution.description}</p>
