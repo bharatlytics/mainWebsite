@@ -36,7 +36,7 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {caseStudies.map((study, index) => (
             <motion.div
               key={study.title}
@@ -45,7 +45,7 @@ export default function CaseStudies() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden group cursor-pointer">
+              <Card className="h-full overflow-hidden group cursor-pointer">
                 <div className="aspect-video relative">
                   <img 
                     src={study.image} 
@@ -56,13 +56,13 @@ export default function CaseStudies() {
                     <ArrowRight className="w-10 h-10 text-white" />
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{study.title}</h3>
-                  <p className="text-muted-foreground mb-4">{study.description}</p>
-                  <div className="grid grid-cols-3 gap-4">
+                <CardContent className="p-8">
+                  <h3 className="text-xl font-semibold mb-4">{study.title}</h3>
+                  <p className="text-muted-foreground mb-6">{study.description}</p>
+                  <div className="grid grid-cols-3 gap-6">
                     {Object.entries(study.stats).map(([label, value]) => (
-                      <div key={label}>
-                        <div className="text-xl font-bold text-primary">{value}</div>
+                      <div key={label} className="text-center">
+                        <div className="text-xl font-bold text-primary mb-1">{value}</div>
                         <div className="text-sm text-muted-foreground">{label}</div>
                       </div>
                     ))}
