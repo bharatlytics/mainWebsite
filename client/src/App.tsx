@@ -4,6 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Chatbot from "@/components/chat/Chatbot";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Products from "@/pages/Products";
@@ -33,6 +34,7 @@ function App() {
           <Router />
         </div>
         <Footer />
+        <Chatbot />
       </div>
       <Toaster />
     </QueryClientProvider>
