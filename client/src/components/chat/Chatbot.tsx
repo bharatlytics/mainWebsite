@@ -20,7 +20,7 @@ export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState<'welcome' | 'email' | 'thanks'>('welcome');
   const { toast } = useToast();
-  
+
   const form = useForm<EmailForm>({
     resolver: zodResolver(emailSchema),
     defaultValues: {
@@ -35,6 +35,7 @@ export default function Chatbot() {
         timestamp: new Date().toISOString(),
       });
       setStep('thanks');
+      form.reset();
     } catch (error) {
       toast({
         variant: "destructive",
@@ -48,7 +49,7 @@ export default function Chatbot() {
     <>
       {/* Chat Button */}
       <Button
-        className="fixed bottom-4 right-4 rounded-full h-14 w-14 shadow-lg"
+        className="fixed bottom-4 right-4 rounded-full h-14 w-14 shadow-lg z-50"
         onClick={() => setIsOpen(true)}
       >
         <MessageCircle className="h-6 w-6" />
@@ -61,7 +62,7 @@ export default function Chatbot() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="fixed bottom-20 right-4 w-80 bg-background rounded-lg shadow-xl border"
+            className="fixed bottom-20 right-4 w-80 bg-background rounded-lg shadow-xl border z-50"
           >
             <div className="flex items-center justify-between p-4 border-b">
               <h3 className="font-semibold">Chat with Us</h3>
@@ -97,7 +98,7 @@ export default function Chatbot() {
                             <FormControl>
                               <div className="flex gap-2">
                                 <Input placeholder="your@email.com" {...field} />
-                                <Button type="submit" size="icon">
+                                <Button type="submit" size="icon" disabled={form.formState.isSubmitting}>
                                   <Send className="h-4 w-4" />
                                 </Button>
                               </div>
