@@ -31,7 +31,10 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <div className="flex-1 pt-16">
-          <Router />
+          {/* Add consistent max-width container for all pages */}
+          <div className="max-w-7xl mx-auto w-full">
+            <Router />
+          </div>
         </div>
         <Footer />
         <Chatbot />
