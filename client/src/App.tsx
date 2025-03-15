@@ -30,12 +30,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <div className="flex-1 pt-16">
-          {/* Add consistent max-width container for all pages */}
-          <div className="max-w-7xl mx-auto w-full">
+        <main className="flex-1 pt-16">
+          {/* Container wrapper for all pages */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <Router />
           </div>
-        </div>
+        </main>
         <Footer />
         <Chatbot />
       </div>
