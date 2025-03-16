@@ -33,5 +33,9 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
-  base: "/mainWebsite/"
+  base: '/mainWebsite/',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+  },
 });
