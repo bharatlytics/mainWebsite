@@ -39,25 +39,25 @@ export default function Contact() {
                 </p>
 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4">
+                  {/* <div className="flex items-start gap-4">
                     <MapPin className="h-6 w-6 text-primary" />
                     <div>
                       <h3 className="font-semibold mb-1">Visit Us</h3>
                       <address className="text-muted-foreground not-italic">
                         Bharatlytics.ai<br />
-                        123 Tech Park, Electronic City<br />
-                        Bengaluru, Karnataka 560100<br />
+                        1003, Padma-Tower-1<br />
+                        Rajendra Place, New Delhi<br />
                         India
                       </address>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-start gap-4">
                     <Phone className="h-6 w-6 text-primary" />
                     <div>
                       <h3 className="font-semibold mb-1">Call Us</h3>
                       <p className="text-muted-foreground">
-                        +91 (80) 1234-5678
+                        +91-9868429095
                       </p>
                     </div>
                   </div>

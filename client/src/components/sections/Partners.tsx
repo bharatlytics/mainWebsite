@@ -29,9 +29,12 @@ const partners = [
 
 // Custom logos for partners without icons in react-icons
 const customLogos = {
-  Hikrobot: "https://www.hikrobotics.com/resources/images/logo.png",
-  Omron: "https://industrial.omron.eu/assets/images/omron-logo.png",
-  SICK: "https://www.sick.com/medias/SICK-Logo.png"
+  Hikrobot: "https://www.security-d.com/en/wp-content/themes/en-theme-230403/img/product-logo/hikrobot.png",
+  Omron: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/OMRON_Logo.svg/1200px-OMRON_Logo.svg.png",
+  SICK: "https://shaltzautomation.com/wp-content/uploads/2024/04/SICK-logo.png",
+  AWS: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png",
+  NVIDIA: "https://upload.wikimedia.org/wikipedia/sco/thumb/2/21/Nvidia_logo.svg/1200px-Nvidia_logo.svg.png",
+  MONGODB: "https://victorycto.com/wp-content/uploads/2023/12/mongodb.png",
 };
 
 export default function Partners() {
@@ -60,7 +63,7 @@ export default function Partners() {
     <section className="py-16 bg-slate-50">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold mb-4">Strategic Partners</h2>
+          <h2 className="text-2xl font-bold mb-4">SaaS Infrastructure Partners</h2>
           <p className="text-lg text-muted-foreground">
             Working with industry leaders to deliver cutting-edge solutions
           </p>
@@ -69,7 +72,7 @@ export default function Partners() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-8">
             {/* Tech Partners */}
-            {partners.map((partner) => (
+            {/* {partners.map((partner) => (
               <motion.div
                 key={partner.name}
                 className="flex-[0_0_20%] min-w-0"
@@ -83,7 +86,7 @@ export default function Partners() {
                   </CardContent>
                 </Card>
               </motion.div>
-            ))}
+            ))} */}
 
             {/* Industrial Partners */}
             {Object.entries(customLogos).map(([name, src]) => (

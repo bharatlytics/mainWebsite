@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between">
           <Link href="/">
-            <a className="font-bold text-xl">Bharatlytics.ai</a>
+            <a className="font-bold text-xl">Bharatlytics</a>
           </Link>
 
           {/* Desktop Navigation */}

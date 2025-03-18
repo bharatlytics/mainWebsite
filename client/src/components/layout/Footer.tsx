@@ -73,10 +73,10 @@ export default function Footer() {
             <h4 className="font-medium mb-4">Contact</h4>
             <address className="text-sm text-muted-foreground not-italic space-y-2">
               <p>Bharatlytics.ai</p>
-              <p>123 Tech Park</p>
-              <p>Bengaluru, Karnataka</p>
+              <p>1003, Padma-Tower-1</p>
+              <p>Rajendra Place, New Delhi</p>
               <p>India</p>
-              <p className="mt-4">Email: info@bharatlytics.ai</p>
+              <p className="mt-4">Email: info@bharatlytics.com</p>
             </address>
           </div>
         </div>

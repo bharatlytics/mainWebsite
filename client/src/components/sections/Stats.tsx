@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Factories Optimized", value: "100+" },
-  { label: "Efficiency Improvement", value: "40%" },
-  { label: "Cost Savings", value: "$50M+" },
+  { label: "Factories Optimized", value: "10+" },
+  { label: "Efficiency Improvement", value: "36%" },
+  { label: "Cost Savings", value: "$2M+" },
   { label: "Client Satisfaction", value: "98%" }
 ];
 

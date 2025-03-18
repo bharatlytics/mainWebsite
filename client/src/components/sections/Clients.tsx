@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 const clients = [
   {
     name: "Tata Motors",
-    logo: "https://www.tatamotors.com/wp-content/themes/tatamotors_2019/images/tata_motors_logo.png"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Tata_Motors_Logo.svg/1328px-Tata_Motors_Logo.svg.png"
   },
   {
     name: "Maruti Suzuki",
-    logo: "https://www.marutisuzuki.com/-/media/images/maruti/marutisuzuki/generic/logo/ms_logo.png"
+    logo: "https://cdn.worldvectorlogo.com/logos/maruti-suzuki-logo.svg"
   },
   {
     name: "Mahindra",
-    logo: "https://www.mahindra.com/assets/mahindra/images/logo.png"
+    logo: "https://gaadhi.s3.amazonaws.com/uploads/post/featured_image/10/Mahindra-logo.png"
   },
   {
     name: "Hero MotoCorp",
-    logo: "https://www.heromotocorp.com/content/dam/hero-aem-website/hero-com/common/logo.png"
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Hero_MotoCorp_Logo.svg/2560px-Hero_MotoCorp_Logo.svg.png"
   }
 ];
 
